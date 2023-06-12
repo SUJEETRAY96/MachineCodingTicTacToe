@@ -34,4 +34,8 @@ public class Player {
     public void setPlayerType(PlayerType playerType) {
         this.playerType = playerType;
     }
+
+    public Cell makeMove() {
+        return null;
+    }
 }
