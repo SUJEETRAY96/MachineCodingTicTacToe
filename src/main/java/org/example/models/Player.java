@@ -1,14 +1,18 @@
 package org.example.models;
 
+import java.util.Scanner;
+
 public class Player {
     private Symbol symbol;
     private String name;
     private PlayerType playerType;
+    private Scanner scanner;
 
     public Player(Symbol symbol, String name, PlayerType playerType) {
         this.symbol = symbol;
         this.name = name;
         this.playerType = playerType;
+        this.scanner = new Scanner(System.in);
     }
 
     public Symbol getSymbol() {
@@ -35,7 +39,11 @@ public class Player {
         this.playerType = playerType;
     }
 
-    public Cell makeMove() {
-        return null;
+    public Cell makeMove(Board board) {
+        System.out.println("Please tell Row number : (starting from 0)");
+        int row = scanner.nextInt();
+        System.out.println("Please tell col number : (starting from 0)");
+        int col = scanner.nextInt();
+        return new Cell(row,col);
     }
 }

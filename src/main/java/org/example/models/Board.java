@@ -41,8 +41,8 @@ public class Board {
             System.out.print("|");
             for(Cell cell : row){
                 cell.display();
-                System.out.println();
             }
+            System.out.println();
         }
     }
 }
