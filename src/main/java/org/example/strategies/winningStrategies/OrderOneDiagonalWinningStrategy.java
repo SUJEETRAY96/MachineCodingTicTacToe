@@ -12,7 +12,7 @@ public class OrderOneDiagonalWinningStrategy implements WinningStrategy{
     private HashMap<Symbol,Integer> leftDiagonalMap;
     private HashMap<Symbol,Integer> rightDiagonalMap;
 
-    public OrderOneDiagonalWinningStrategy(int size, List<Player> players){
+    public OrderOneDiagonalWinningStrategy( List<Player> players){
         leftDiagonalMap = new HashMap<>();
         rightDiagonalMap = new HashMap<>();
         for(Player player : players){

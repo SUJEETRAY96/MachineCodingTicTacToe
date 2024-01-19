@@ -25,9 +25,9 @@ public class OrderOneRowWinningStrategy implements WinningStrategy{
     public boolean checkWinner(Board board, Move move) {
         int row = move.getCell().getRow();
         Symbol symbol = move.getPlayer().getSymbol();
-        rowMaps.get(row).put(
-                symbol,1+rowMaps.get(row).get(symbol)
-        );
+        if (rowMaps.get(row).containsKey(symbol)) {
+            rowMaps.get(row).put(symbol, rowMaps.get(row).get(symbol) + 1);
+        }
         if(rowMaps.get(row).get(symbol) == board.getSize()){
             return true;
         }

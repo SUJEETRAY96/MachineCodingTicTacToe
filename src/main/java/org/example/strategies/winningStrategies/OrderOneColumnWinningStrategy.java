@@ -23,10 +23,10 @@ public class OrderOneColumnWinningStrategy implements WinningStrategy{
     }
     @Override
     public boolean checkWinner(Board board, Move move) {
-        int col = move.getCell().getColumn();
+         int col = move.getCell().getColumn();
         Symbol symbol = move.getPlayer().getSymbol();
         colMaps.get(col).put(
-                symbol,1+colMaps.get(col).get(symbol)
+                symbol,1+(int)colMaps.get(col).get(symbol)
         );
         if(colMaps.get(col).get(symbol) == board.getSize()){
             return true;
